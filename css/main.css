@@ -572,6 +572,10 @@
         font-size: 0.8rem;
     }
 }
+.dimensions-video-ejercito {
+    min-height: 50vh;
+    width: 100%;
+}
 /*Nota personal:
     • ALIGN: Vertical
     • JUSTIFY: Horizontal */
