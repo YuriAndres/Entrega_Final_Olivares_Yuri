@@ -428,7 +428,12 @@
     gap: 1rem;
     position: relative;
     flex-wrap: wrap;
-}   
+}
+@media (max-width: 650px) {
+    .cards-container {
+        flex-direction: column;
+    }
+}
  .card-ejercito {   
     flex: 1;
     border-radius: 0.8rem;
