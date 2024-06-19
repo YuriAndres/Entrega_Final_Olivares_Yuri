@@ -524,25 +524,6 @@
     color: white;
     overflow: hidden;
 }
-
-/* posible uso a futuro:
-
-@keyframes colorChange {
-    0% {
-        background-color: #002041;
-    }
-    50% {
-        background-color: #003972;
-    }
-    100% {
-        background-color: #002041;
-    } 
-    
-    .grid-item2, .grid-item4 {
-    animation: colorChange 5s infinite;
-}
-*/
-
 .grid-item2, .grid-item3, .grid-item4 {
     background: linear-gradient(to bottom right, #054d94, #002041);
     display: flex;
@@ -571,7 +552,26 @@
     border-radius: 100%;
     margin-top: 1rem;
 }
-
+.image-presentador {
+    width: 25rem;
+    height: auto;
+    min-width: 100%;
+}
+.lema-ejercito-text {
+    font-style: italic;
+    font-size: 1.7rem;
+}
+.text-body-secondary-ejercito {
+    font-size: 1.1rem;
+}
+@media (max-width: 500px) {
+    .lema-ejercito-text {
+        font-size: 1.1rem;
+    }
+    .text-body-secondary-ejercito {
+        font-size: 0.8rem;
+    }
+}
 /*Nota personal:
     • ALIGN: Vertical
     • JUSTIFY: Horizontal */
@@ -585,70 +585,69 @@
 ############## DEMOGRAFÍA // 4demografia.html #######################
 ###################################################################*/ 
 
-    .background-demografia {
-        background-color: #002d5a;
-    }
-    .hero-demografia {
-        position: relative;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        overflow: hidden;
-    }
-    .hero-demografia::before {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: url('../video/goku.mp4') no-repeat center center;
-        background-size: cover;
-        z-index: -1;
-        display: block;
-        
-    }
-    .hero-demografia video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit:cover;
-    }
-    .hero-demografia-content {
-        width: 45%;
-        background-color: rgba(68, 68, 68, 0.4);
-        border-radius: 3%;
-        padding: 1rem;
-        backdrop-filter: blur(3px);
-    }
-    .hero-demografia-title {
-        font-size: 2rem;
-        color: white;
-        z-index: 1;
-        text-shadow: 2px 1.2px 1px black;
-    }
-    .hero-demografia-text {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-style: italic;
-        font-size: 1.5rem;
-        color: white;
-        padding: 1rem;
-        z-index: 1;
-        text-shadow: 2px 1.2px 1px black;
-    }
-    .card-title-demografia {
-        font-size: 1.2rem;
-        color: white;
-        z-index: 1;
-        text-shadow: 3px 3px 2px black;
-        font-family: "Saiyan";
-    }
-    .lema-demografia-title {
-        font-size: 2rem;
-    }
-    .lema-demografia-text {
-        font-style: italic;
-        font-size: 1.5rem;
-    }
+.background-demografia {
+    background-color: #002d5a;
+}
+.hero-demografia {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+.hero-demografia::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../video/goku.mp4') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    display: block;      
+}
+.hero-demografia video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.hero-demografia-content {
+    width: 45%;
+    background-color: rgba(68, 68, 68, 0.4);
+    border-radius: 3%;
+    padding: 1rem;
+    backdrop-filter: blur(3px);
+}
+.hero-demografia-title {
+    font-size: 2rem;
+    color: white;
+    z-index: 1;
+    text-shadow: 2px 1.2px 1px black;
+}
+.hero-demografia-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem;
+    z-index: 1;
+    text-shadow: 2px 1.2px 1px black;
+}
+.card-title-demografia {
+    font-size: 1.2rem;
+    color: white;
+    z-index: 1;
+    text-shadow: 3px 3px 2px black;
+    font-family: "Saiyan";
+}
+.lema-demografia-title {
+    font-size: 2rem;
+}
+.lema-demografia-text {
+    font-style: italic;
+    font-size: 1.5rem;
+}
