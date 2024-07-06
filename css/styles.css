@@ -1,0 +1,662 @@
+/* ############### */
+/* #### FONTS #### */
+/* ############### */
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url(../fonts/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Saiyan";
+    src: url(../fonts/Saiyan-Sans.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ############### */
+/* #### RESET #### */
+/* ############### */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap", sans-serif;
+}
+
+/* ############### */
+/* #### HEADER #### */
+/* ############### */
+
+.header {
+    background-color: #002d5a;
+    padding: 0.4rem 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+@media (max-width: 237px) {
+    .header {
+        display:none;
+    }
+}
+@media (max-width: 309px) {
+    .logo {
+        display:none;
+    }
+}
+
+
+
+/* incorporé estos elementos para que contrasten mejor con el fondo */
+
+.header a {
+    text-decoration: none;
+    color: white;
+    margin: 0 3px;
+    position: relative;
+}
+.header a:visited {
+    color: white; 
+    text-decoration: none;
+}
+.header a:hover {
+    color: #ccc;
+    text-decoration: none;
+}
+.logo {
+    width: 4.5rem;
+}
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.menu.link {
+    text-decoration: none;
+    color: #002d5a;
+}
+
+/* ##################################################################
+###################### INDEX // index.html ##########################
+##################################################################### */ 
+
+.hero {
+    min-height: 100vh;
+    background-image: url(../img/palacio_kami.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero-title {
+    font-size: 2.1rem;
+}
+.hero-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 1.3rem;
+}
+.hero-autor {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.05rem;
+}
+.goku-face {
+    width: 8rem;
+    border: 0.5rem;
+    border: 0.3rem solid #002d5a;
+    border-radius: 100%;
+    margin-top: 1rem;
+}
+
+/* ############### */
+/* #### CARDS #### */
+/* ############### */
+
+.cards-1 {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: #002d5a;
+}   
+.cards-2 {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: #002d5a;
+}
+.cards-3 {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: #002d5a;
+    flex-wrap: wrap;
+}   
+ .card {   
+    flex: 1;
+    border-radius: 0.8rem;
+    background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
+    overflow: hidden;
+}
+.card-img {
+    width: 100%;
+}
+.card-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.3rem;
+}
+/* Cards de los links */
+.card-link {
+    padding: 0.3rem 0.4rem;
+    text-decoration: none;
+    background-color: #002d5a;
+    color: white;
+    font-size: 0.92rem;
+}
+.card-link a {
+    text-decoration: none;
+    color: white;
+    margin: 0 3px;
+    position: relative;
+}
+.card-link:visited {
+    color: white; 
+    text-decoration: none;
+}
+.card-link:hover {
+    color: #ccc;
+    text-decoration: none;
+}
+.footer {
+    background: #002d5a;
+    color: white;
+    text-align: center;
+    padding: 3rem;
+}
+.footer-lema {
+    font-family: "Saiyan", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+}
+/*  */
+
+/* ##################################################################
+############## VENTAJAS Y APTITUDES // 1ventajas.html ###############
+##################################################################### */ 
+
+
+/* ############### */
+/* #### HERO #### */
+/* ############### */
+
+.hero-ventajas {
+    min-height: 100vh;
+    background-image: url(../img/sheng_long1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero-ventajas-title {
+    font-size: 1.8rem;
+    color: white;
+}
+.hero-ventajas-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: white;
+}
+.hero-ventajas-autor {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    color: white;
+}
+.popo-face {
+    width: 15rem;
+    border: 0rem solid whitesmoke;
+    border-radius: 60%;
+    margin-top: 1rem;
+    width: 70px;
+}
+
+/* ############### */
+/* #### CARDS #### */
+/* ############### */
+
+.cards-ventajas-1 {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: #002d5a;
+}   
+ .card-ventajas {   
+    flex: 1;
+    border-radius: 0.8rem;
+    background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
+    overflow: hidden;
+}
+.card-ventajas-img {
+    width: 100%;
+}
+.card-ventajas-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.3rem;
+}
+
+/* ##################################################################
+############## SALUD // 2salud.html ###############
+##################################################################### */ 
+
+
+/* ############### */
+/* #### HERO #### */
+/* ############### */
+
+.hero-salud {
+    min-height: 100vh;
+    background-image: url(../img/torre_karin3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero-salud-content {
+    width: 45%;
+    background-color: rgba(77, 77, 77, 0.3);
+    border-radius: 3%;
+    padding: 1rem;
+    backdrop-filter: blur(2px);
+}
+.hero-salud-title {
+    font-size: 1.39rem;
+    color: white;
+}
+.hero-salud-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: white;
+    padding: 1rem;
+}
+.hero-salud-autor {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    padding: 0.5rem;
+}
+.hermitaño-face {
+    width: 15rem;
+    border: 0.12rem solid whitesmoke;
+    border-radius: 20%;
+    margin-top: 1rem;
+    width: 100px;
+    opacity: 0.68;
+}
+
+/* ############### */
+/* #### CARDS #### */
+/* ############### */
+
+
+/* Cards Salud-1 y General */
+
+.cards-salud-1 {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: #002d5a;
+}   
+ .card-salud {   
+    flex: 1;
+    border-radius: 0.8rem;
+    background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
+    overflow: hidden;
+}
+.card-salud-img {
+    width: 100%;
+}
+.card-salud-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.3rem;
+}
+
+/* Cards Salud-2 */
+
+.cards-salud-1 {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: #002d5a;
+}
+
+/*###################################################################
+############## EJÉRCITO // 3ejercito.html ###########################
+###################################################################*/ 
+
+.background-ejercito {
+    background-color: #002d5a;
+}
+.hero-ejercito {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+.hero-ejercito::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../video/goku.mp4') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    display: block;
+    
+}
+.hero-ejercito video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.hero-ejercito-content {
+    width: 45%;
+    background-color: rgba(68, 68, 68, 0.5);
+    border-radius: 3%;
+    padding: 1rem;
+    backdrop-filter: blur(3px);
+}
+.hero-ejercito-title {
+    font-size: 2rem;
+    color: white;
+    z-index: 1;
+}
+.hero-ejercito-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: white;
+    z-index: 1;
+}
+.hero-ejercito-autor {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    color: white;
+    z-index: 1;
+}
+
+/*######################
+### Cards Ejército-1 ###
+######################*/
+
+.cards-container {
+    margin: auto;
+    padding: 1rem;
+}
+.cards-ejercito-1 {
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    flex-wrap: wrap;
+}
+@media (max-width: 650px) {
+    .cards-container {
+        flex-direction: column;
+    }
+}
+ .card-ejercito {   
+    flex: 1;
+    border-radius: 0.8rem;
+    background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
+    overflow: hidden;
+}
+.card-ejercito-img {
+    width: 100%;
+}
+.card-ejercito-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.3rem;
+}
+
+/*######################
+### Cards Ejército-2 ###
+######################*/
+
+.cards-ejercito-2 {
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+/* ###############################
+######## GRID // Ejército ########
+################################*/
+
+.common-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.grid-container {
+    min-height: 100vh;
+    display: grid;
+    /*nota personal: también se pueden usar porcentajes*/
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+        "item1 item1 item3"
+        "item4 item5 item6";
+    align-items: stretch;
+    justify-items: stretch;
+}
+@media (max-width: 990px) {
+    .grid-container {
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-template-areas: 
+            "item1 item1"
+            "item3 item4"
+            "item5 item6";
+    }
+    .grid-container > * {
+        flex-grow: 1;
+    }
+
+    @media (max-width: 700px) {
+        .grid-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+                "item1"
+                "item3"
+                "item4"
+                "item5"
+                "item6";
+        }
+    }
+}
+.grid {
+    margin-bottom: 2rem;
+    position: relative;
+}
+.grid-item1 {
+    grid-area: item1;
+}
+.img-item1 {
+    width: 100%;
+    height: 100%;
+}
+.grid-item3 {
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+.grid-item2, .grid-item3, .grid-item4 {
+    background: linear-gradient(to bottom right, #054d94, #002041);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    color: white;
+    padding: 3rem;
+}
+.grid-item3 {
+    background: linear-gradient(to top right, #002041, #06529e);
+}
+.popo-text, .grid-text2, .grid-text3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 1.8rem;
+}
+.popo-autor {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+}
+.popo-face {
+    width: 8rem;
+    border: 0.5rem;
+    border: 0.05rem solid #d9dde2;
+    border-radius: 100%;
+    margin-top: 1rem;
+}
+.image-presentador {
+    width: 25rem;
+    height: auto;
+    min-width: 100%;
+}
+.lema-ejercito-text {
+    font-style: italic;
+    font-size: 1.7rem;
+}
+.text-body-secondary-ejercito {
+    font-size: 1.1rem;
+}
+@media (max-width: 500px) {
+    .lema-ejercito-text {
+        font-size: 1.1rem;
+    }
+    .text-body-secondary-ejercito {
+        font-size: 0.8rem;
+    }
+}
+.dimensions-video-ejercito {
+    min-height: 50vh;
+    width: 100%;
+}
+/*Nota personal:
+    • ALIGN: Vertical
+    • JUSTIFY: Horizontal */
+
+/* Nota personal: estos comandos sirven para comentar el texto seleccionado:
+    • Ctrl + C + K */
+
+
+
+/*###################################################################
+############## DEMOGRAFÍA // 4demografia.html #######################
+###################################################################*/ 
+
+.background-demografia {
+    background-color: #002d5a;
+}
+.hero-demografia {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+.hero-demografia::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../video/goku.mp4') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    display: block;      
+}
+.hero-demografia video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.hero-demografia-content {
+    width: 45%;
+    background-color: rgba(68, 68, 68, 0.4);
+    border-radius: 3%;
+    padding: 1rem;
+    backdrop-filter: blur(3px);
+}
+.hero-demografia-title {
+    font-size: 2rem;
+    color: white;
+    z-index: 1;
+    text-shadow: 2px 1.2px 1px black;
+}
+.hero-demografia-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem;
+    z-index: 1;
+    text-shadow: 2px 1.2px 1px black;
+}
+.card-title-demografia {
+    font-size: 1.2rem;
+    color: white;
+    z-index: 1;
+    text-shadow: 3px 3px 2px black;
+    font-family: "Saiyan";
+}
+.lema-demografia-title {
+    font-size: 2rem;
+}
+.lema-demografia-text {
+    font-style: italic;
+    font-size: 1.5rem;
+}
