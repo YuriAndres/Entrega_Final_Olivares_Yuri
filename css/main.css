@@ -25,20 +25,28 @@
   width: 100%;
   position: fixed;
   z-index: 2;
+  animation: fadeIn 1s ease-out;
 }
 .header a {
   text-decoration: none;
   color: white;
   margin: 0 3px;
   position: relative;
+  transition: color 0.3s ease, transform 0.3s ease, font-weight 0.3s ease, box-shadow 0.3s ease;
 }
 .header a:visited {
   color: white;
   text-decoration: none;
 }
 .header a:hover {
-  color: white;
+  color: #777;
   text-decoration: none;
+  transform: scale(1.2);
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.header a:active {
+  transform: scale(1.1);
 }
 
 @media (max-width: 237px) {
@@ -48,24 +56,54 @@
 }
 .logo {
   width: 4.5rem;
+  opacity: 0;
+  animation: fadeInOpacity 5s ease-out forwards;
 }
-
 @media (max-width: 309px) {
   .logo {
     display: none;
   }
 }
+
 .menu {
   list-style-type: none;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
-.menu .link {
+.menu .menu-link {
   text-decoration: none;
   color: #002d5a;
+  transition: color 0.3s ease, transform 0.3s ease, font-weight 0.3s ease, box-shadow 0.3s ease;
+}
+.menu .menu-link:hover {
+  color: #777;
+  transform: scale(1.2);
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.menu .menu-link:active {
+  transform: scale(1.1);
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* Hero Index */
 .hero {
   min-height: 100vh;
@@ -332,9 +370,11 @@
 .cards-1 .card, .cards-2 .card, .cards-3 .card {
   flex: 1 1 calc(25% - 1rem);
   margin-bottom: 1rem;
+  position: relative; /* Añade posición relativa para manejar la sombra */
   border-radius: 0.8rem;
   background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
   overflow: hidden;
+  transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
 }
 @media (max-width: 768px) {
   .cards-1 .card, .cards-2 .card, .cards-3 .card {
@@ -343,6 +383,7 @@
 }
 .cards-1 .card .card-img, .cards-2 .card .card-img, .cards-3 .card .card-img {
   width: 100%;
+  transition: transform 0.3s ease; /* Transición para la transformación de la imagen */
 }
 .cards-1 .card .card-info, .cards-2 .card .card-info, .cards-3 .card .card-info {
   padding: 1rem;
@@ -350,20 +391,28 @@
   flex-direction: column;
   align-items: start;
   gap: 0.3rem;
-  color: #002d5a;
+  color: black;
 }
-.cards-1 .card .card-info .card-link, .cards-2 .card .card-info .card-link, .cards-3 .card .card-info .card-link {
+.cards-1 .card:hover, .cards-2 .card:hover, .cards-3 .card:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombras más pronunciadas al hacer hover */
+}
+.cards-1 .card:hover .card-img, .cards-2 .card:hover .card-img, .cards-3 .card:hover .card-img {
+  transform: scale(1.1); /* Escala la imagen para dar efecto de zoom al hacer hover */
+}
+.cards-1 .card .card-link, .cards-2 .card .card-link, .cards-3 .card .card-link {
   padding: 0.3rem 0.4rem;
   text-decoration: none;
   background-color: #002d5a;
   color: white;
   font-size: 0.92rem;
 }
-.cards-1 .card .card-info .card-link:visited, .cards-2 .card .card-info .card-link:visited, .cards-3 .card .card-info .card-link:visited {
+.cards-1 .card .card-link:visited, .cards-2 .card .card-link:visited, .cards-3 .card .card-link:visited {
   color: white;
 }
-.cards-1 .card .card-info .card-link:hover, .cards-2 .card .card-info .card-link:hover, .cards-3 .card .card-info .card-link:hover {
+.cards-1 .card .card-link:hover, .cards-2 .card .card-link:hover, .cards-3 .card .card-link:hover {
   color: #ccc;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000; /* Sombra para el texto al hacer hover */
 }
 
 /* Cards (1) Ventajas */
@@ -377,17 +426,23 @@
 .cards-ventajas-1 .card-ventajas {
   flex: 1 1 calc(25% - 1rem);
   margin-bottom: 1rem;
+  position: relative;
   border-radius: 0.8rem;
   background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
   overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 @media (max-width: 768px) {
   .cards-ventajas-1 .card-ventajas {
     flex: 1 1 100%;
   }
 }
+.cards-ventajas-1 .card-ventajas .card-ventajas-big-img {
+  width: 100%;
+}
 .cards-ventajas-1 .card-ventajas .card-ventajas-img {
   width: 100%;
+  transition: transform 0.3s ease;
 }
 .cards-ventajas-1 .card-ventajas .card-ventajas-info {
   padding: 2rem;
@@ -395,7 +450,13 @@
   flex-direction: column;
   align-items: start;
   gap: 0.3rem;
-  color: #002d5a;
+  color: black;
+}
+.cards-ventajas-1 .card-ventajas:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.cards-ventajas-1 .card-ventajas:hover .card-ventajas-img {
+  transform: scale(1.1);
 }
 
 /* Cards (2) Salud */
@@ -409,9 +470,11 @@
 .cards-salud-1 .card-salud, .cards-salud-2 .card-salud {
   flex: 1 1 calc(25% - 1rem);
   margin-bottom: 1rem;
+  position: relative;
   border-radius: 0.8rem;
   background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
   overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 @media (max-width: 768px) {
   .cards-salud-1 .card-salud, .cards-salud-2 .card-salud {
@@ -420,6 +483,7 @@
 }
 .cards-salud-1 .card-salud .card-salud-img, .cards-salud-2 .card-salud .card-salud-img {
   width: 100%;
+  transition: transform 0.3s ease;
 }
 .cards-salud-1 .card-salud .card-salud-info, .cards-salud-2 .card-salud .card-salud-info {
   padding: 2rem;
@@ -427,7 +491,13 @@
   flex-direction: column;
   align-items: start;
   gap: 0.3rem;
-  color: #002d5a;
+  color: black;
+}
+.cards-salud-1 .card-salud:hover, .cards-salud-2 .card-salud:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.cards-salud-1 .card-salud:hover .card-salud-img, .cards-salud-2 .card-salud:hover .card-salud-img {
+  transform: scale(1.1);
 }
 
 /* Cards (3) Ejército */
@@ -454,10 +524,12 @@
   border-radius: 0.8rem;
   background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
   overflow: hidden;
+  transition: box-shadow 0.3s ease;
 }
 
 .card-ejercito-img {
   width: 100%;
+  transition: transform 0.3s ease;
 }
 
 .card-ejercito-info {
@@ -466,6 +538,14 @@
   flex-direction: column;
   align-items: start;
   gap: 0.3rem;
+  color: black;
+}
+
+.card-ejercito:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.card-ejercito:hover .card-ejercito-img {
+  transform: scale(1.1);
 }
 
 /* Grid (3) Ejército */

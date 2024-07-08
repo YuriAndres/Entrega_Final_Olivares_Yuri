@@ -8,12 +8,14 @@
     width: 100%;
     position: fixed;
     z-index: 2;
+    animation: fadeIn 1s ease-out;
 
     a {
         text-decoration: none;
         color: $secondaryColor;
         margin: 0 3px;
         position: relative;
+        transition: color 0.3s ease, transform 0.3s ease, font-weight 0.3s ease, box-shadow 0.3s ease;
 
         &:visited {
             color: $secondaryColor; 
@@ -21,8 +23,15 @@
         }
 
         &:hover {
-            color: $secondaryColor;
+            color: #777;
             text-decoration: none;
+            transform: scale(1.2);
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        &:active {
+            transform: scale(1.1);
         }
     }
 }
@@ -32,11 +41,13 @@
         display: none;
     }
 }
+
 .logo {
     width: 4.5rem;
-}
-@media (max-width: 309px) {
-    .logo {
+    opacity: 0;
+    animation: fadeInOpacity 5s ease-out forwards;
+
+    @media (max-width: 309px) {
         display: none;
     }
 }
@@ -47,8 +58,40 @@
     gap: 1rem;
     flex-wrap: wrap;
 
-    .link {
+    .menu-link {
         text-decoration: none;
         color: $mainColor;
+        transition: color 0.3s ease, transform 0.3s ease, font-weight 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            color: #777;
+            transform: scale(1.2);
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        &:active {
+            transform: scale(1.1);
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInOpacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
