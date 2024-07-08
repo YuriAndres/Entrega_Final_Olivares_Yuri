@@ -1,0 +1,54 @@
+.header {
+    background-color: $mainColor;
+    padding: 0.4rem 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $secondaryColor;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+
+    a {
+        text-decoration: none;
+        color: $secondaryColor;
+        margin: 0 3px;
+        position: relative;
+
+        &:visited {
+            color: $secondaryColor; 
+            text-decoration: none;
+        }
+
+        &:hover {
+            color: $secondaryColor;
+            text-decoration: none;
+        }
+    }
+}
+
+@media (max-width: 237px) {
+    .header {
+        display: none;
+    }
+}
+.logo {
+    width: 4.5rem;
+}
+@media (max-width: 309px) {
+    .logo {
+        display: none;
+    }
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .link {
+        text-decoration: none;
+        color: $mainColor;
+    }
+}

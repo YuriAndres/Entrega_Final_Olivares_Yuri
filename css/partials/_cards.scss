@@ -1,0 +1,153 @@
+/* Cards Index */
+
+.cards-1, .cards-2, .cards-3 {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: $mainColor;
+}
+
+.cards-3 {
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    border-radius: 0.8rem;
+    background: linear-gradient(to bottom right, $secondaryColor, #c5c5c4);
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.3rem;
+}
+
+.card-link {
+    padding: 0.3rem 0.4rem;
+    text-decoration: none;
+    background-color: $mainColor;
+    color: $secondaryColor;
+    font-size: 0.92rem;
+
+    &:visited {
+        color: $secondaryColor;
+    }
+
+    &:hover {
+        color: #ccc;
+    }
+}
+
+/* Cards (1) Ventajas */
+
+.cards-ventajas-1 {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: $mainColor;
+}
+
+.card-ventajas {
+    flex: 1;
+    border-radius: 0.8rem;
+    background: linear-gradient(to bottom right, $secondaryColor, #c5c5c4);
+    overflow: hidden;
+}
+
+.card-ventajas-img {
+    width: 100%;
+}
+
+.card-ventajas-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.3rem;
+}
+
+/* Cards (2) Salud */
+
+.cards-salud-1 {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: $mainColor;
+}
+
+.card-salud {
+    flex: 1;
+    border-radius: 0.8rem;
+    background: linear-gradient(to bottom right, $secondaryColor, #c5c5c4);
+    overflow: hidden;
+}
+
+.card-salud-img {
+    width: 100%;
+}
+
+.card-salud-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.3rem;
+}
+
+/* Cards (3) Ejército */
+
+.cards-container {
+    margin: auto;
+    padding: 1rem;
+}
+
+.cards-ejercito-1 {
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 650px) {
+    .cards-container {
+        flex-direction: column;
+    }
+}
+
+.card-ejercito {   
+    flex: 1;
+    border-radius: 0.8rem;
+    background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
+    overflow: hidden;
+}
+
+.card-ejercito-img {
+    width: 100%;
+}
+
+.card-ejercito-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.3rem;
+}
+
+/* Cards Ejército-2 */
+
+.cards-ejercito-2 {
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    flex-wrap: wrap;
+}
