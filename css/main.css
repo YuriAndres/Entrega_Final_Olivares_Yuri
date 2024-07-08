@@ -370,11 +370,11 @@
 .cards-1 .card, .cards-2 .card, .cards-3 .card {
   flex: 1 1 calc(25% - 1rem);
   margin-bottom: 1rem;
-  position: relative; /* Añade posición relativa para manejar la sombra */
+  position: relative;
   border-radius: 0.8rem;
   background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
   overflow: hidden;
-  transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+  transition: box-shadow 0.3s ease;
 }
 @media (max-width: 768px) {
   .cards-1 .card, .cards-2 .card, .cards-3 .card {
@@ -383,7 +383,7 @@
 }
 .cards-1 .card .card-img, .cards-2 .card .card-img, .cards-3 .card .card-img {
   width: 100%;
-  transition: transform 0.3s ease; /* Transición para la transformación de la imagen */
+  transition: transform 0.3s ease;
 }
 .cards-1 .card .card-info, .cards-2 .card .card-info, .cards-3 .card .card-info {
   padding: 1rem;
@@ -394,10 +394,10 @@
   color: black;
 }
 .cards-1 .card:hover, .cards-2 .card:hover, .cards-3 .card:hover {
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombras más pronunciadas al hacer hover */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 .cards-1 .card:hover .card-img, .cards-2 .card:hover .card-img, .cards-3 .card:hover .card-img {
-  transform: scale(1.1); /* Escala la imagen para dar efecto de zoom al hacer hover */
+  transform: scale(1.1);
 }
 .cards-1 .card .card-link, .cards-2 .card .card-link, .cards-3 .card .card-link {
   padding: 0.3rem 0.4rem;
@@ -412,7 +412,7 @@
 .cards-1 .card .card-link:hover, .cards-2 .card .card-link:hover, .cards-3 .card .card-link:hover {
   color: #ccc;
   font-weight: bold;
-  text-shadow: 1px 1px 2px #000; /* Sombra para el texto al hacer hover */
+  text-shadow: 1px 1px 2px #000;
 }
 
 /* Cards (1) Ventajas */

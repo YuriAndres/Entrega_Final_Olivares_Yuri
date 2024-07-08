@@ -10,7 +10,7 @@
     .card {
         flex: 1 1 calc(25% - 1rem);
         margin-bottom: 1rem;
-        position: relative; /* Añade posición relativa para manejar la sombra */
+        position: relative;
 
         @media (max-width: $breakpoint-width) {
             flex: 1 1 100%;
@@ -19,11 +19,11 @@
         border-radius: 0.8rem;
         background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
         overflow: hidden;
-        transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+        transition: box-shadow 0.3s ease;
 
         .card-img {
             width: 100%;
-            transition: transform 0.3s ease; /* Transición para la transformación de la imagen */
+            transition: transform 0.3s ease;
         }
 
         .card-info {
@@ -37,10 +37,10 @@
         }
 
         &:hover {
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombras más pronunciadas al hacer hover */
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 
             .card-img {
-                transform: scale(1.1); /* Escala la imagen para dar efecto de zoom al hacer hover */
+                transform: scale(1.1);
             }
         }
 
@@ -58,7 +58,7 @@
             &:hover {
                 color: #ccc;
                 font-weight: bold;
-                text-shadow: 1px 1px 2px #000; /* Sombra para el texto al hacer hover */
+                text-shadow: 1px 1px 2px #000;
             }
         }
     }
