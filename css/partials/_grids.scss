@@ -1,6 +1,5 @@
-/* Grid (3) Ejército */
 .common-container {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -12,7 +11,7 @@
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: 2fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         "item1 item1 item3"
         "item4 item5 item6";
     align-items: stretch;
@@ -21,7 +20,7 @@
     @media (max-width: 990px) {
         grid-template-columns: 2fr 2fr;
         grid-template-rows: 2fr 1fr 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "item1 item1"
             "item3 item4"
             "item5 item6";
@@ -30,7 +29,7 @@
     @media (max-width: 700px) {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "item1"
             "item3"
             "item4"
@@ -46,35 +45,47 @@
 
 .grid-item1 {
     grid-area: item1;
+    position: relative;
+    overflow: hidden;
 }
 
 .img-item1 {
     width: 100%;
     height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.grid-item1:hover .img-item1 {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .grid-item3 {
     flex-direction: column;
     text-align: center;
-    color: white;
+    color: $secondaryColor;
     overflow: hidden;
 }
 
-.grid-item2, .grid-item3, .grid-item4 {
-    background: linear-gradient(to bottom right, #054d94, #002041);
+.grid-item2,
+.grid-item3,
+.grid-item4 {
+    background: linear-gradient(to bottom right, #054d94, $mainColor);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.7rem;
-    color: white;
+    color: $secondaryColor;
     padding: 3rem;
 }
 
 .grid-item3 {
-    background: linear-gradient(to top right, #002041, #06529e);
+    background: linear-gradient(to top right, $mainColor, #06529e);
 }
 
-.popo-text, .grid-text2, .grid-text3 {
+.popo-text,
+.grid-text2,
+.grid-text3 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
     font-size: 1.8rem;
