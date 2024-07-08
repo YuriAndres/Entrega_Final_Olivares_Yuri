@@ -10,6 +10,7 @@
     .card {
         flex: 1 1 calc(25% - 1rem);
         margin-bottom: 1rem;
+        position: relative; /* Añade posición relativa para manejar la sombra */
 
         @media (max-width: $breakpoint-width) {
             flex: 1 1 100%;
@@ -18,33 +19,46 @@
         border-radius: 0.8rem;
         background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
         overflow: hidden;
+        transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
 
         .card-img {
             width: 100%;
+            transition: transform 0.3s ease; /* Transición para la transformación de la imagen */
         }
 
         .card-info {
+            
             padding: 1rem;
             display: flex;
             flex-direction: column;
             align-items: start;
             gap: 0.3rem;
-            color: $mainColor;
+            color: black;
+        }
 
-            .card-link {
-                padding: 0.3rem 0.4rem;
-                text-decoration: none;
-                background-color: $mainColor;
+        &:hover {
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombras más pronunciadas al hacer hover */
+
+            .card-img {
+                transform: scale(1.1); /* Escala la imagen para dar efecto de zoom al hacer hover */
+            }
+        }
+
+        .card-link {
+            padding: 0.3rem 0.4rem;
+            text-decoration: none;
+            background-color: $mainColor;
+            color: $secondaryColor;
+            font-size: 0.92rem;
+
+            &:visited {
                 color: $secondaryColor;
-                font-size: 0.92rem;
+            }
 
-                &:visited {
-                    color: $secondaryColor;
-                }
-
-                &:hover {
-                    color: #ccc;
-                }
+            &:hover {
+                color: #ccc;
+                font-weight: bold;
+                text-shadow: 1px 1px 2px #000; /* Sombra para el texto al hacer hover */
             }
         }
     }
@@ -62,6 +76,7 @@
     .card-ventajas {
         flex: 1 1 calc(25% - 1rem);
         margin-bottom: 1rem;
+        position: relative;
 
         @media (max-width: $breakpoint-width) {
             flex: 1 1 100%;
@@ -70,9 +85,15 @@
         border-radius: 0.8rem;
         background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
         overflow: hidden;
+        transition: box-shadow 0.3s ease;
+
+        .card-ventajas-big-img {
+            width: 100%;
+        }
 
         .card-ventajas-img {
             width: 100%;
+            transition: transform 0.3s ease;
         }
 
         .card-ventajas-info {
@@ -81,7 +102,15 @@
             flex-direction: column;
             align-items: start;
             gap: 0.3rem;
-            color: $mainColor;
+            color: black;
+        }
+
+        &:hover {
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+
+            .card-ventajas-img {
+                transform: scale(1.1);
+            }
         }
     }
 }
@@ -99,6 +128,7 @@
     .card-salud {
         flex: 1 1 calc(25% - 1rem);
         margin-bottom: 1rem;
+        position: relative;
 
         @media (max-width: $breakpoint-width) {
             flex: 1 1 100%;
@@ -107,9 +137,11 @@
         border-radius: 0.8rem;
         background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
         overflow: hidden;
+        transition: box-shadow 0.3s ease;
 
         .card-salud-img {
             width: 100%;
+            transition: transform 0.3s ease;
         }
 
         .card-salud-info {
@@ -118,7 +150,15 @@
             flex-direction: column;
             align-items: start;
             gap: 0.3rem;
-            color: $mainColor;
+            color: black;
+        }
+
+        &:hover {
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+
+            .card-salud-img {
+                transform: scale(1.1);
+            }
         }
     }
 }
@@ -148,10 +188,12 @@
     border-radius: 0.8rem;
     background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
     overflow: hidden;
+    transition: box-shadow 0.3s ease;
 }
 
 .card-ejercito-img {
     width: 100%;
+    transition: transform 0.3s ease;
 }
 
 .card-ejercito-info {
@@ -160,4 +202,13 @@
     flex-direction: column;
     align-items: start;
     gap: 0.3rem;
+    color: black;
+}
+
+.card-ejercito:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+
+    .card-ejercito-img {
+        transform: scale(1.1);
+    }
 }
