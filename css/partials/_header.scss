@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: $secondaryColor;
+    color: $secondaryColor; // blanco
     width: 100%;
     position: fixed;
     z-index: 2;
@@ -12,13 +12,13 @@
 
     a {
         text-decoration: none;
-        color: $secondaryColor;
+        color: $secondaryColor; // blanco
         margin: 0 3px;
         position: relative;
         transition: color 0.3s ease, transform 0.3s ease, font-weight 0.3s ease, box-shadow 0.3s ease;
 
         &:visited {
-            color: $secondaryColor; 
+            color: $secondaryColor; // blanco
             text-decoration: none;
         }
 
@@ -60,7 +60,7 @@
 
     .menu-link {
         text-decoration: none;
-        color: $mainColor;
+        color: $secondaryColor; // blanco
         transition: color 0.3s ease, transform 0.3s ease, font-weight 0.3s ease, box-shadow 0.3s ease;
 
         &:hover {
@@ -95,3 +95,4 @@
         opacity: 1;
     }
 }
+
