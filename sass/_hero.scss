@@ -34,7 +34,7 @@
     @include flex-center(column);
   }
   
-  /* Hero Index */
+  /* Hero (0) Index */
   .hero {
     @extend %common-hero;
     @include bg-cover('../img/palacio_kami.jpg');

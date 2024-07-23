@@ -1,98 +1,113 @@
-.header {
-    background-color: $mainColor;
-    padding: 0.4rem 0.3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: $secondaryColor;
-    width: 100%;
-    position: fixed;
-    z-index: 2;
-    animation: fadeIn 1s ease-out;
-
-    a {
-        text-decoration: none;
-        color: $secondaryColor;
-        margin: 0 3px;
-        position: relative;
-        transition: color 0.3s ease, transform 0.3s ease, font-weight 0.3s ease, box-shadow 0.3s ease;
-
-        &:visited {
-            color: $secondaryColor;
-            text-decoration: none;
-        }
-
-        &:hover {
-            color: #777;
-            text-decoration: none;
-            transform: scale(1.2);
-            font-weight: bold;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        &:active {
-            transform: scale(1.1);
-        }
-    }
+@mixin transition($properties...) {
+  transition: $properties 0.3s ease;
 }
 
-@media (max-width: 237px) {
-    .header {
-        display: none;
-    }
+@mixin transform($scale) {
+  transform: scale($scale);
 }
 
-.logo {
-    width: 4.5rem;
-    opacity: 0;
-    animation: fadeInOpacity 5s ease-out forwards;
-
-    @media (max-width: 309px) {
-        display: none;
-    }
-}
-
-.menu {
-    list-style-type: none;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-
-    .menu-link {
-        text-decoration: none;
-        color: $secondaryColor;
-        transition: color 0.3s ease, transform 0.3s ease, font-weight 0.3s ease, box-shadow 0.3s ease;
-
-        &:hover {
-            color: #777;
-            transform: scale(1.2);
-            font-weight: bold;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        &:active {
-            transform: scale(1.1);
-        }
-    }
+%hover-effect {
+  color: #777;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInOpacity {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+
+.header {
+  background-color: $mainColor;
+  padding: 0.4rem 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $secondaryColor;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  animation: fadeIn 1s ease-out;
+
+  a {
+    text-decoration: none;
+    color: $secondaryColor;
+    margin: 0 3px;
+    position: relative;
+    @include transition(color, transform, font-weight, box-shadow);
+
+    &:visited {
+      color: $secondaryColor;
+      text-decoration: none;
+    }
+
+    &:hover {
+      @extend %hover-effect;
+      @include transform(1.2);
+      text-decoration: none;
+    }
+
+    &:active {
+      @include transform(1.1);
+    }
+  }
+}
+
+@media (max-width: 237px) {
+  .header {
+    display: none;
+  }
+}
+
+.logo {
+  width: 4.5rem;
+  opacity: 0;
+  animation: fadeInOpacity 5s ease-out forwards;
+
+  @media (max-width: 309px) {
+    display: none;
+  }
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  .menu-link {
+    text-decoration: none;
+    color: $secondaryColor;
+    @include transition(color, transform, font-weight, box-shadow);
+
+    &:hover {
+      @extend %hover-effect;
+      @include transform(1.2);
+    }
+
+    &:active {
+      @include transform(1.1);
+    }
+  }
+}
+
+.card-ejercito, .video-ejercito {
+  background-color: grey;
+}
+
 
