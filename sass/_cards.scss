@@ -1,0 +1,179 @@
+@mixin card-base {
+    flex: 1 1 calc(25% - 1rem);
+    margin-bottom: 1rem;
+    border-radius: 0.8rem;
+    background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  
+    @media (max-width: $breakpoint-width) {
+      flex: 1 1 100%;
+    }
+  }
+  
+  @mixin card-img-transition {
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  @mixin card-info {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.3rem;
+    color: black;
+  }
+  
+  @mixin card-hover-effect {
+    &:hover {
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  
+      .card-img,
+      .card-ventajas-img,
+      .card-salud-img,
+      .card-ejercito-img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  %shared-card {
+    @include card-base;
+  }
+  
+  %shared-card-hover {
+    @include card-hover-effect;
+  }
+  
+  /* Cards Index */
+  .cards-1, .cards-2, .cards-3 {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: $mainColor;
+    flex-wrap: wrap;
+  
+    .card {
+      @extend %shared-card;
+      @extend %shared-card-hover;
+  
+      .card-img {
+        @include card-img-transition;
+      }
+  
+      .card-info {
+        padding: 1rem;
+        @include card-info;
+  
+        .card-link {
+          padding: 0.3rem 0.4rem;
+          text-decoration: none;
+          background-color: $mainColor;
+          color: $secondaryColor;
+          font-size: 0.92rem;
+  
+          &:visited {
+            color: $secondaryColor;
+          }
+  
+          &:hover {
+            color: #ccc;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Cards (1) Ventajas */
+  .cards-ventajas-1 {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: $mainColor;
+    flex-wrap: wrap;
+  
+    .card-ventajas {
+      @extend %shared-card;
+      @extend %shared-card-hover;
+      position: relative;
+  
+      .card-ventajas-big-img {
+        width: 100%;
+      }
+  
+      .card-ventajas-img {
+        @include card-img-transition;
+      }
+  
+      .card-ventajas-info {
+        @include card-info;
+      }
+    }
+  }
+  
+  /* Cards (2) Salud */
+  .cards-salud-1, .cards-salud-2 {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: $mainColor;
+    flex-wrap: wrap;
+  
+    .card-salud {
+      @extend %shared-card;
+      @extend %shared-card-hover;
+      position: relative;
+  
+      .card-salud-img {
+        @include card-img-transition;
+      }
+  
+      .card-salud-info {
+        @include card-info;
+      }
+    }
+  }
+  
+  /* Cards (3) Ejército */
+  .cards-container {
+    margin: auto;
+    padding: 1rem;;
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+    }
+  }
+  
+  .cards-ejercito-1, .cards-ejercito-2 {
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  .card-ejercito {
+    @extend %shared-card;
+    @extend %shared-card-hover;
+  }
+  
+  .card-ejercito-img {
+    @include card-img-transition;
+  }
+  
+  .card-ejercito-info {
+    @include card-info;
+  }
+  
+  /* Cards (4) Demografía */
+  .card-img-top {
+    @include card-img-transition;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+  }
+  

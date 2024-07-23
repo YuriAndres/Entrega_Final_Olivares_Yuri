@@ -1,0 +1,148 @@
+@mixin flex-center($direction: column, $wrap: wrap) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: $wrap;
+  }
+  
+  @mixin grid-responsive($template-columns, $template-rows, $template-areas) {
+    grid-template-columns: $template-columns;
+    grid-template-rows: $template-rows;
+    grid-template-areas: $template-areas;
+  }
+  
+  @mixin img-transition {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  @mixin box-shadow-hover {
+    &:hover .img-item1 {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  @mixin gradient-bg($start-color, $end-color) {
+    background: linear-gradient(to bottom right, $start-color, $end-color);
+  }
+  
+  @mixin font-styles($font-family, $font-style: normal, $font-size: 1rem) {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-size: $font-size;
+  }
+  
+  %common-flex-center {
+    @include flex-center();
+  }
+  
+  %shared-gradient-bg {
+    @include gradient-bg(#054d94, $mainColor);
+  }
+  
+   .common-container {
+    @extend %common-flex-center;
+  }
+  
+   .grid-container {
+    min-height: 100vh;
+    display: grid;
+    @include grid-responsive(2fr 2fr 2fr, 2fr 1fr, "item1 item1 item3" "item4 item5 item6");
+  
+    @media (max-width: 990px) {
+      @include grid-responsive(2fr 2fr, 2fr 1fr 1fr, "item1 item1" "item3 item4" "item5 item6");
+    }
+  
+    @media (max-width: 700px) {
+      @include grid-responsive(1fr, 1fr, "item1" "item3" "item4" "item5" "item6");
+    }
+  }
+  
+  .grid {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .grid-item1 {
+    grid-area: item1;
+    position: relative;
+    overflow: hidden;
+    @extend %common-flex-center;
+    @include box-shadow-hover;
+  }
+  
+  .img-item1 {
+    @include img-transition;
+  }
+  
+  .grid-item3 {
+    flex-direction: column;
+    text-align: center;
+    color: $secondaryColor;
+    overflow: hidden;
+  }
+  
+  .grid-item2,
+  .grid-item3,
+  .grid-item4 {
+    @extend %shared-gradient-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    color: $secondaryColor;
+    padding: 3rem;
+  }
+  
+  .grid-item3 {
+    @include gradient-bg($mainColor, #06529e);
+  }
+  
+  .popo-text,
+  .grid-text2,
+  .grid-text3 {
+    @include font-styles('Segoe UI', italic, 1.8rem);
+  }
+  
+  .popo-autor {
+    @include font-styles('Segoe UI', normal, 1.2rem);
+  }
+  
+  .popo-face {
+    width: 8rem;
+    border: 0.05rem solid #d9dde2;
+    border-radius: 100%;
+    margin-top: 1rem;
+  }
+  
+  .image-presentador {
+    width: 25rem;
+    height: auto;
+    min-width: 100%;
+  }
+  
+  .lema-ejercito-text {
+    font-style: italic;
+    font-size: 1.7rem;
+  
+    @media (max-width: 500px) {
+      font-size: 1.1rem;
+    }
+  }
+  
+  .text-body-secondary-ejercito {
+    font-size: 1.1rem;
+  
+    @media (max-width: 500px) {
+      font-size: 0.8rem;
+    }
+  }
+  
+  .dimensions-video-ejercito {
+    min-height: 50vh;
+    width: 100%;
+  }
+  

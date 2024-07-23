@@ -1,0 +1,261 @@
+@mixin flex-center($direction: column, $wrap: no-wrap) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: $wrap;
+  }
+  
+  @mixin bg-cover($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  @mixin hero-text($font-size, $color: $secondaryColor) {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: $font-size;
+    color: $color;
+  }
+  
+  @mixin border-radius($radius) {
+    border-radius: $radius;
+  }
+  
+  @mixin backdrop($color, $blur) {
+    background-color: $color;
+    backdrop-filter: blur($blur);
+  }
+  
+   %common-hero {
+    min-height: 100vh;
+    text-align: center;
+    @include flex-center(column);
+  }
+  
+  /* Hero Index */
+  .hero {
+    @extend %common-hero;
+    @include bg-cover('../img/palacio_kami.jpg');
+  
+    .hero-title {
+      font-size: 2.1rem;
+    }
+  
+    .hero-text {
+      @include hero-text(1.3rem);
+    }
+  
+    .hero-autor {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1.05rem;
+    }
+  
+    .goku-face {
+      width: 8rem;
+      border: 0.3rem solid $mainColor;
+      @include border-radius(100%);
+      margin-top: 1rem;
+    }
+  }
+
+  .hero-text-index {
+    color: black;
+    font-size: 1.3rem;
+  }
+  
+  /* Hero (1) Ventajas */
+  .hero-ventajas {
+    @extend %common-hero;
+    @include bg-cover('../img/sheng_long1.jpg');
+  
+    .hero-ventajas-title {
+      font-size: 1.8rem;
+      color: $secondaryColor;
+    }
+  
+    .hero-ventajas-text {
+      @include hero-text(1.2rem);
+    }
+  
+    .hero-ventajas-autor {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1rem;
+      color: $secondaryColor;
+    }
+  
+    .popo-face {
+      width: 70px;
+      border: 0 solid whitesmoke;
+      @include border-radius(60%);
+      margin-top: 1rem;
+    }
+  }
+  
+  /* Hero (2) Salud */
+  .hero-salud {
+    @extend %common-hero;
+    @include bg-cover('../img/torre_karin3.jpg');
+  
+    .hero-salud-content {
+      width: 45%;
+      @include backdrop(rgba(77, 77, 77, 0.05), 2px);
+      @include border-radius(5%);
+      padding: 1rem;
+    }
+  
+    .hero-salud-title {
+      font-size: 1.7rem;
+      color: $secondaryColor;
+      z-index: 1;
+      text-shadow: 2px 1.2px 1px black;
+    }
+  
+    .hero-salud-text {
+      @include hero-text(1.5rem);
+      padding: 1rem;
+      z-index: 1;
+      text-shadow: 2px 1.2px 1px black;
+    }
+  
+    .hero-salud-autor {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 0.9rem;
+      color: $secondaryColor;
+      padding: 0.5rem;
+      z-index: 1;
+      text-shadow: 2px 1.2px 1px black;
+    }
+  
+    .hermitaño-face {
+      width: 100px;
+      border: 0.12rem solid whitesmoke;
+      @include border-radius(100%);
+      opacity: 0.8;
+    }
+  }
+  
+  /* Hero (3) Ejército */
+  .background-ejercito {
+    background-color: $mainColor;
+  }
+  
+  .hero-ejercito {
+    @extend %common-hero;
+    position: relative;
+    overflow: hidden;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('../video/goku.mp4') no-repeat center center;
+      background-size: cover;
+      z-index: -1;
+    }
+  
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .hero-ejercito-content {
+      width: 45%;
+      @include backdrop(rgba(68, 68, 68, 0.5), 3px);
+      @include border-radius(3%);
+      padding: 1rem;
+    }
+  
+    .hero-ejercito-title {
+      font-size: 2rem;
+      color: $secondaryColor;
+      z-index: 1;
+    }
+  
+    .hero-ejercito-text {
+      @include hero-text(1.5rem);
+      z-index: 1;
+    }
+  
+    .hero-ejercito-autor {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1rem;
+      color: $secondaryColor;
+      z-index: 1;
+    }
+  }
+  
+  /* Hero (4) Demografía */
+  .background-demografia {
+    background-color: $mainColor;
+  }
+  
+  .hero-demografia {
+    @extend %common-hero;
+    position: relative;
+    overflow: hidden;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('../video/goku.mp4') no-repeat center center;
+      background-size: cover;
+      z-index: -1;
+    }
+  
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .hero-demografia-content {
+      width: 45%;
+      @include backdrop(rgba(68, 68, 68, 0.4), 3px);
+      @include border-radius(3%);
+      padding: 1rem;
+    }
+  
+    .hero-demografia-title {
+      font-size: 2rem;
+      color: $secondaryColor;
+      z-index: 1;
+      text-shadow: 2px 1.2px 1px black;
+    }
+  
+    .hero-demografia-text {
+      @include hero-text(1.5rem);
+      padding: 1rem;
+      z-index: 1;
+      text-shadow: 2px 1.2px 1px black;
+    }
+  }
+  
+  .card-title-demografia {
+    font-size: 1.2rem;
+    color: $secondaryColor;
+    z-index: 1;
+    text-shadow: 3px 3px 2px black;
+    font-family: "Saiyan";
+  }
+  
+  .lema-demografia-title {
+    font-size: 2rem;
+  }
+  
+  .lema-demografia-text {
+    font-style: italic;
+    font-size: 1.5rem;
+  }
+  

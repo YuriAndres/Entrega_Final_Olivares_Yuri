@@ -104,17 +104,21 @@
     opacity: 1;
   }
 }
-/* Hero Index */
-.hero {
+.hero-demografia, .hero-ejercito, .hero-salud, .hero-ventajas, .hero {
   min-height: 100vh;
-  background-image: url(../img/palacio_kami.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  flex-wrap: no-wrap;
+}
+
+/* Hero Index */
+.hero {
+  background-image: url("../img/palacio_kami.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero .hero-title {
   font-size: 2.1rem;
@@ -123,6 +127,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-style: italic;
   font-size: 1.3rem;
+  color: white;
 }
 .hero .hero-autor {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -135,17 +140,16 @@
   margin-top: 1rem;
 }
 
+.hero-text-index {
+  color: black;
+  font-size: 1.3rem;
+}
+
 /* Hero (1) Ventajas */
 .hero-ventajas {
-  min-height: 100vh;
-  background-image: url(../img/sheng_long1.jpg);
+  background-image: url("../img/sheng_long1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 .hero-ventajas .hero-ventajas-title {
   font-size: 1.8rem;
@@ -163,32 +167,25 @@
   color: white;
 }
 .hero-ventajas .popo-face {
-  width: 15rem;
-  border: 0rem solid whitesmoke;
+  width: 70px;
+  border: 0 solid whitesmoke;
   border-radius: 60%;
   margin-top: 1rem;
-  width: 70px;
 }
 
 /* Hero (2) Salud */
 .hero-salud {
-  min-height: 100vh;
-  background-image: url(../img/torre_karin3.jpg);
+  background-image: url("../img/torre_karin3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 .hero-salud .hero-salud-content {
   width: 45%;
   background-color: rgba(77, 77, 77, 0.05);
-  border-radius: 5%;
-  padding: 1rem;
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
+  border-radius: 5%;
+  padding: 1rem;
 }
 .hero-salud .hero-salud-title {
   font-size: 1.7rem;
@@ -214,10 +211,9 @@
   text-shadow: 2px 1.2px 1px black;
 }
 .hero-salud .hermitaño-face {
-  width: 15rem;
+  width: 100px;
   border: 0.12rem solid whitesmoke;
   border-radius: 100%;
-  width: 100px;
   opacity: 0.8;
 }
 
@@ -228,22 +224,16 @@
 
 .hero-ejercito {
   position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   overflow: hidden;
 }
 .hero-ejercito::before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   background: url("../video/goku.mp4") no-repeat center center;
   background-size: cover;
   z-index: -1;
-  display: block;
 }
 .hero-ejercito video {
   position: absolute;
@@ -254,35 +244,31 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.hero-ejercito-content {
+.hero-ejercito .hero-ejercito-content {
   width: 45%;
   background-color: rgba(68, 68, 68, 0.5);
-  border-radius: 3%;
-  padding: 1rem;
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
+  border-radius: 3%;
+  padding: 1rem;
 }
-
-.hero-ejercito-title {
+.hero-ejercito .hero-ejercito-title {
   font-size: 2rem;
   color: white;
   z-index: 1;
 }
-
-.hero-ejercito-text, .hero-ejercito-autor {
+.hero-ejercito .hero-ejercito-text {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-size: 1.5rem;
   color: white;
   z-index: 1;
 }
-
-.hero-ejercito-text {
-  font-style: italic;
-  font-size: 1.5rem;
-}
-
-.hero-ejercito-autor {
+.hero-ejercito .hero-ejercito-autor {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
+  color: white;
+  z-index: 1;
 }
 
 /* Hero (4) Demografía */
@@ -292,22 +278,16 @@
 
 .hero-demografia {
   position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   overflow: hidden;
 }
 .hero-demografia::before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   background: url("../video/goku.mp4") no-repeat center center;
   background-size: cover;
   z-index: -1;
-  display: block;
 }
 .hero-demografia video {
   position: absolute;
@@ -321,10 +301,10 @@
 .hero-demografia .hero-demografia-content {
   width: 45%;
   background-color: rgba(68, 68, 68, 0.4);
-  border-radius: 3%;
-  padding: 1rem;
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
+  border-radius: 3%;
+  padding: 1rem;
 }
 .hero-demografia .hero-demografia-title {
   font-size: 2rem;
@@ -359,15 +339,7 @@
   font-size: 1.5rem;
 }
 
-/* Cards Index */
-.cards-1, .cards-2, .cards-3 {
-  padding: 1rem;
-  display: flex;
-  gap: 1rem;
-  background-color: #002d5a;
-  flex-wrap: wrap;
-}
-.cards-1 .card, .cards-2 .card, .cards-3 .card {
+.card-ejercito, .cards-salud-1 .card-salud, .cards-salud-2 .card-salud, .cards-ventajas-1 .card-ventajas, .cards-1 .card, .cards-2 .card, .cards-3 .card {
   flex: 1 1 calc(25% - 1rem);
   margin-bottom: 1rem;
   border-radius: 0.8rem;
@@ -376,9 +348,46 @@
   transition: box-shadow 0.3s ease;
 }
 @media (max-width: 770px) {
-  .cards-1 .card, .cards-2 .card, .cards-3 .card {
+  .card-ejercito, .cards-salud-1 .card-salud, .cards-salud-2 .card-salud, .cards-ventajas-1 .card-ventajas, .cards-1 .card, .cards-2 .card, .cards-3 .card {
     flex: 1 1 100%;
   }
+}
+
+.card-ejercito:hover, .cards-salud-1 .card-salud:hover, .cards-salud-2 .card-salud:hover, .cards-ventajas-1 .card-ventajas:hover, .cards-1 .card:hover, .cards-2 .card:hover, .cards-3 .card:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.card-ejercito:hover .card-img, .cards-salud-1 .card-salud:hover .card-img, .cards-salud-2 .card-salud:hover .card-img, .cards-ventajas-1 .card-ventajas:hover .card-img, .cards-1 .card:hover .card-img, .cards-2 .card:hover .card-img, .cards-3 .card:hover .card-img,
+.card-ejercito:hover .card-ventajas-img,
+.cards-salud-1 .card-salud:hover .card-ventajas-img,
+.cards-salud-2 .card-salud:hover .card-ventajas-img,
+.cards-ventajas-1 .card-ventajas:hover .card-ventajas-img,
+.cards-1 .card:hover .card-ventajas-img,
+.cards-2 .card:hover .card-ventajas-img,
+.cards-3 .card:hover .card-ventajas-img,
+.card-ejercito:hover .card-salud-img,
+.cards-salud-1 .card-salud:hover .card-salud-img,
+.cards-salud-2 .card-salud:hover .card-salud-img,
+.cards-ventajas-1 .card-ventajas:hover .card-salud-img,
+.cards-1 .card:hover .card-salud-img,
+.cards-2 .card:hover .card-salud-img,
+.cards-3 .card:hover .card-salud-img,
+.card-ejercito:hover .card-ejercito-img,
+.cards-salud-1 .card-salud:hover .card-ejercito-img,
+.cards-salud-2 .card-salud:hover .card-ejercito-img,
+.cards-ventajas-1 .card-ventajas:hover .card-ejercito-img,
+.cards-1 .card:hover .card-ejercito-img,
+.cards-2 .card:hover .card-ejercito-img,
+.cards-3 .card:hover .card-ejercito-img {
+  transform: scale(1.1);
+}
+
+/* Cards Index */
+.cards-1, .cards-2, .cards-3 {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  background-color: #002d5a;
+  flex-wrap: wrap;
 }
 .cards-1 .card .card-img, .cards-2 .card .card-img, .cards-3 .card .card-img {
   width: 100%;
@@ -386,6 +395,7 @@
 }
 .cards-1 .card .card-info, .cards-2 .card .card-info, .cards-3 .card .card-info {
   padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -405,12 +415,6 @@
 .cards-1 .card .card-info .card-link:hover, .cards-2 .card .card-info .card-link:hover, .cards-3 .card .card-info .card-link:hover {
   color: #ccc;
 }
-.cards-1 .card:hover, .cards-2 .card:hover, .cards-3 .card:hover {
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-}
-.cards-1 .card:hover .card-img, .cards-2 .card:hover .card-img, .cards-3 .card:hover .card-img {
-  transform: scale(1.1);
-}
 
 /* Cards (1) Ventajas */
 .cards-ventajas-1 {
@@ -421,18 +425,7 @@
   flex-wrap: wrap;
 }
 .cards-ventajas-1 .card-ventajas {
-  flex: 1 1 calc(25% - 1rem);
-  margin-bottom: 1rem;
   position: relative;
-  border-radius: 0.8rem;
-  background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-}
-@media (max-width: 770px) {
-  .cards-ventajas-1 .card-ventajas {
-    flex: 1 1 100%;
-  }
 }
 .cards-ventajas-1 .card-ventajas .card-ventajas-big-img {
   width: 100%;
@@ -449,12 +442,6 @@
   gap: 0.3rem;
   color: black;
 }
-.cards-ventajas-1 .card-ventajas:hover {
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-}
-.cards-ventajas-1 .card-ventajas:hover .card-ventajas-img {
-  transform: scale(1.1);
-}
 
 /* Cards (2) Salud */
 .cards-salud-1, .cards-salud-2 {
@@ -465,18 +452,7 @@
   flex-wrap: wrap;
 }
 .cards-salud-1 .card-salud, .cards-salud-2 .card-salud {
-  flex: 1 1 calc(25% - 1rem);
-  margin-bottom: 1rem;
   position: relative;
-  border-radius: 0.8rem;
-  background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-}
-@media (max-width: 770px) {
-  .cards-salud-1 .card-salud, .cards-salud-2 .card-salud {
-    flex: 1 1 100%;
-  }
 }
 .cards-salud-1 .card-salud .card-salud-img, .cards-salud-2 .card-salud .card-salud-img {
   width: 100%;
@@ -489,12 +465,6 @@
   align-items: start;
   gap: 0.3rem;
   color: black;
-}
-.cards-salud-1 .card-salud:hover, .cards-salud-2 .card-salud:hover {
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-}
-.cards-salud-1 .card-salud:hover .card-salud-img, .cards-salud-2 .card-salud:hover .card-salud-img {
-  transform: scale(1.1);
 }
 
 /* Cards (3) Ejército */
@@ -516,14 +486,6 @@
   flex-wrap: wrap;
 }
 
-.card-ejercito {
-  flex: 1;
-  border-radius: 0.8rem;
-  background: linear-gradient(to bottom right, #ffffff, #c5c5c4);
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-}
-
 .card-ejercito-img {
   width: 100%;
   transition: transform 0.3s ease;
@@ -538,16 +500,10 @@
   color: black;
 }
 
-.card-ejercito:hover {
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-}
-.card-ejercito:hover .card-ejercito-img {
-  transform: scale(1.1);
-}
-
 /* Cards (4) Demografía */
 .card-img-top {
   width: 100%;
+  transition: transform 0.3s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card-img-top:hover {
@@ -555,12 +511,18 @@
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.common-container {
+.grid-item1, .common-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.grid-item2,
+.grid-item3,
+.grid-item4 {
+  background: linear-gradient(to bottom right, #054d94, #002d5a);
 }
 
 .grid-container {
@@ -569,8 +531,6 @@
   grid-template-columns: 2fr 2fr 2fr;
   grid-template-rows: 2fr 1fr;
   grid-template-areas: "item1 item1 item3" "item4 item5 item6";
-  align-items: stretch;
-  justify-items: stretch;
 }
 @media (max-width: 990px) {
   .grid-container {
@@ -597,16 +557,15 @@
   position: relative;
   overflow: hidden;
 }
+.grid-item1:hover .img-item1 {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 
 .img-item1 {
   width: 100%;
   height: 100%;
   transition: transform 0.3s ease;
-}
-
-.grid-item1:hover .img-item1 {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .grid-item3 {
@@ -619,7 +578,6 @@
 .grid-item2,
 .grid-item3,
 .grid-item4 {
-  background: linear-gradient(to bottom right, #054d94, #002d5a);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -629,19 +587,20 @@
 }
 
 .grid-item3 {
-  background: linear-gradient(to top right, #002d5a, #06529e);
+  background: linear-gradient(to bottom right, #002d5a, #06529e);
 }
 
 .popo-text,
 .grid-text2,
 .grid-text3 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI";
   font-style: italic;
   font-size: 1.8rem;
 }
 
 .popo-autor {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI";
+  font-style: normal;
   font-size: 1.2rem;
 }
 
